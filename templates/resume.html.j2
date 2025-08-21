@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ basics.name }} - Resume</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+<body>
+    <div class="resume-single-column">
+        <header>
+            <h1>{{ basics.name }}</h1>
+            <h2>{{ basics.label }}</h2>
+            <p>
+                <a href="mailto:{{ basics.email }}">{{ basics.email }}</a> | <a href="tel:{{ basics.phone }}">{{ basics.phone_display }}</a> | {{ basics.location.city }}, {{ basics.location.state }}
+                {% if basics.github or basics.linkedin %} |
+                    {% if basics.github %}
+                        <a href="{{ basics.github }}" target="_blank" rel="noopener">GitHub</a>
+                    {% endif %}
+                    {% if basics.linkedin %}
+                        {% if basics.github %} | {% endif %}
+                        <a href="{{ basics.linkedin }}" target="_blank" rel="noopener">LinkedIn</a>
+                    {% endif %}
+                {% endif %}
+            </p>
+        </header>
+
+        <section class="about">
+            <h3>Professional Summary</h3>
+            <p>{{ basics.summary }}</p>
+        </section>
+
+        <section>
+            <h3>Relevant Professional Experience</h3>
+            {% for job in work %}
+            <div class="work-entry">
+                <strong>{{ job.position }}</strong> at {{ job.company }}<br>
+                <span>{{ job.startDate }} - {{ job.endDate }}</span>
+                {% if job.summary %}
+                <p>{{ job.summary }}</p>
+                {% endif %}
+                {% if job.highlights %}
+                <ul class="highlights">
+                    {% for item in job.highlights %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            {% endfor %}
+        </section>
+
+        <section>
+            <h3>Education</h3>
+            {% for edu in education %}
+            <div class="education-entry">
+                <strong>{{ edu.degree }}</strong> in {{ edu.area }}<br>
+                <span>{{ edu.institution }}</span> ({{ edu.startDate }} - {{ edu.endDate }})
+            </div>
+            {% endfor %}
+        </section>
+    </div>
+</body>
+</html>

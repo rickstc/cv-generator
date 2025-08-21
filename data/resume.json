@@ -1,0 +1,66 @@
+{
+    "basics": {
+        "name": "Timothy Ricks",
+        "label": "Software Engineer",
+        "email": "${EMAIL_ADDRESS}",
+        "phone": "${PHONE_NUMBER}",
+        "phone_display": "${PHONE_DISPLAY}",
+        "location": {
+            "city": "${CITY}",
+            "state": "${STATE}"
+        },
+        "summary": "Senior Backend Software Engineer with over a decade of experience in Python and Django. I specialize in designing and implementing scalable REST APIs, migrating monolithic applications to the cloud, and building robust, maintainable systems. My diverse background in finance and IT provides a unique perspective on solving complex business challenges with technology.",
+        "github": "${GITHUB}",
+        "linkedin": "${LINKEDIN}"
+    },
+    "work": [
+        {
+            "company": "Voltus",
+            "position": "Backend Software Engineer",
+            "startDate": "2024-04",
+            "endDate": "Present",
+            "highlights": [
+                "Architected and implemented new APIs using Python and Go to optimize outbound customer communications, improving system efficiency.",
+                "Developed and maintained core services with Flask and Temporal, ensuring reliable and scalable communication workflows.",
+                "Integrated critical third-party services, including AWS SES, Twilio, and HubSpot, to streamline communication and automate processes."
+            ]
+        },
+        {
+            "company": "WV State Police",
+            "position": "Full Stack Software Engineer",
+            "startDate": "2014-08",
+            "endDate": "2024-08",
+            "highlights": [
+                "Principal engineer overseeing the development of a US DOJ grant-funded, web-based application providing tools to assist law enforcement in their investigation of reports of online child exploitation.",
+                "Led the conversion of legacy Java and PHP APIs into a single Python REST API using Django and Django Rest Framework, significantly simplifying the application's architecture and improving maintainability.",
+                "Spearheaded the migration of all on-premises hardware and software to AWS GovCloud, managing the configuration of load balancing, auto scaling, and rolling deployments.",
+                "Architected and implemented CI/CD pipelines using GitHub Actions, enabling zero-downtime deployments and ensuring continuous availability for the project.",
+                "Split a monolithic application into cloud-native, event-driven services using AWS Lambda, SQS, and Step Functions, enhancing application scalability and fault-tolerance.",
+                "Led and mentored a team of four developers and several graduate students in the development and maintenance of web-based tools."
+            ]
+        }
+    ],
+    "education": [
+        {
+            "institution": "Western Governors University",
+            "area": "Information Technology - Security",
+            "degree": "BS",
+            "startDate": "2012",
+            "endDate": "2016"
+        },
+        {
+            "institution": "West Virginia Wesleyan College",
+            "area": "Business Administration",
+            "degree": "MBA",
+            "startDate": "2008",
+            "endDate": "2009"
+        },
+        {
+            "institution": "West Virginia Wesleyan College",
+            "area": "Accounting",
+            "degree": "BS",
+            "startDate": "2004",
+            "endDate": "2008"
+        }
+    ]
+}
